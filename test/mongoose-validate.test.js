@@ -169,4 +169,24 @@ describe('Validate', function () {
 
   });
 
+  describe('.url', function () {
+    it('should return true for valid url', function (done) {
+      validate.url('http://test.com').should.be.true;
+      validate.url('http://www.test.com').should.be.true;
+      validate.url('www.test.com').should.be.true;
+      done();
+    });
+
+    it('should return false for invalid value', function (done) {
+      validate.url('').should.be.false;
+      validate.url(' ').should.be.false;
+      validate.url('http://.com').should.be.false;
+      validate.url('.com').should.be.false;
+      validate.url('www.').should.be.false;
+      validate.url(1).should.be.false;
+      validate.url(['http://www.test.com']).should.be.false;
+      done();
+    });
+  });
+
 });
