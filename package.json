@@ -7,7 +7,7 @@
   "author": "RGBboy <me@rgbboy.com>",
   "repository" : {
     "type" : "git",
-    "url" : "http://github.com/RGBboy/mongoose-validate"
+    "url" : "git://github.com/IlskenLabs/mongoose-validate.git"
   },
   "main": "index",
   "engines": {
